@@ -53,3 +53,12 @@ target_link_libraries(OBCApp
 
 # add_library()
 # add_executable()
+
+option(IS_BUILD_PLUGIN_EXAMPLES "build examples" ON)
+
+# if(IS_BUILD_PLUGIN_EXAMPLES)
+#     #修改目录位置 还要防止套娃现象发生
+#     include(${CMAKE_CURRENT_LIST_DIR}/src/plugin/examples/)
+# endif()
+
+add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/src/plugin/examples/)
